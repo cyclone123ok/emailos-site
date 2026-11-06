@@ -11,7 +11,7 @@
 <main>
 <h1>EmailOS privacy policy</h1>
 <p class="lead">EmailOS keeps your mail on your own computer. It has no company server, no advertising, and no analytics.</p>
-<p>Last updated: 6 November 2026</p>
+<p>Last updated: 7 November 2026</p>
 
 <h2>1. What EmailOS reads</h2>
 <p>EmailOS reads the mailboxes you connect. It uses two Google permissions:</p>
@@ -23,14 +23,18 @@
 
 <h2>2. Where your data lives</h2>
 <p>EmailOS stores your mail, categories, and history in an encrypted database on your computer. Your sign-in tokens and the database key sit in Windows Credential Manager. The developer has no server and receives no copy of your data.</p>
+<p>EmailOS logs its AI, breach check, unsubscribe, webhook, and chat alert connections. The log holds counts, not email text. Encrypted backups stay on this computer, and the erase option deletes them. A retention period does not reach backups.</p>
 <p>Attachments you save and files you export are ordinary files. They sit unencrypted in the folder you choose, and EmailOS does not remove them.</p>
 <p>EmailOS keeps local mail copies until you remove them, or until they pass a retention period you set in Settings.</p>
 
 <h2>3. When data leaves your computer</h2>
-<p>EmailOS talks to your mail provider to fetch, change, and send mail. Data reaches anyone else only in these four cases, each of which you switch on or start:</p>
+<p>EmailOS talks to your mail provider to fetch, change, and send mail. Data reaches anyone else only in these cases, each of which you switch on or start:</p>
 <ul>
-<li><strong>Anthropic (AI reading).</strong> With your own API key, EmailOS sends email text to the Anthropic API to sort mail and draft replies. Anthropic handles that text under its API terms.</li>
+<li><strong>Anthropic (AI reading).</strong> With your own API key, EmailOS sends email text to the Anthropic API to sort mail and draft replies. It sends a picture only when you ask it to read one. Anthropic handles that text under its API terms.</li>
 <li><strong>Have I Been Pwned (breach check).</strong> With your own API key, EmailOS sends your connected email addresses to this service when you run a check. Breach data comes from <a href="https://haveibeenpwned.com">Have I Been Pwned</a> under a CC BY 4.0 licence.</li>
+<li><strong>Chat alerts.</strong> If you add a Slack or Teams link, EmailOS sends the sender and subject of new VIP mail to it.</li>
+<li><strong>Voice input.</strong> If you turn on the microphone, your browser may send your voice to its maker to turn it into text.</li>
+<li><strong>Rules you write.</strong> Auto-send rules and your away message send email to the people you choose or to the sender.</li>
 <li><strong>Webhooks.</strong> If you add a webhook address, EmailOS sends event details to that address.</li>
 <li><strong>One-click unsubscribe.</strong> When you unsubscribe, EmailOS contacts the address the sender provides for that purpose.</li>
 </ul>
@@ -50,7 +54,7 @@
 <h2>5. Removing your data</h2>
 <ul>
 <li>In EmailOS, open Settings and remove an account. This deletes its stored sign-in and its local mail copies.</li>
-<li>In EmailOS, use the erase option in Settings to delete local copies of mail, drafts, and history. Your sender marks stay, so a local-only mark keeps working. Saved attachments and exports stay in your folders.</li>
+<li>In EmailOS, use the erase option in Settings to delete local copies of mail, drafts, history, and backups. Your sender marks stay, so a local-only mark keeps working. Saved attachments and exports stay in your folders.</li>
 <li>In your Google Account, open <a href="https://myaccount.google.com/permissions">Third-party connections</a> to remove the app's access.</li>
 </ul>
 
