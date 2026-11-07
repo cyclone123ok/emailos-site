@@ -282,7 +282,7 @@ main:focus { outline: none; }
 .top a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 main {
-  width: min(100%, 72rem);
+  width: min(100%, 80rem);
   margin: 0 auto;
   padding: clamp(40px, 7vw, 88px) clamp(16px, 5vw, 40px) 0;
   scroll-margin-top: 24px;
@@ -331,7 +331,7 @@ h2 {
 }
 
 .close-in {
-  width: calc(min(100%, 72rem) - 2 * clamp(16px, 5vw, 40px));
+  width: calc(min(100%, 80rem) - 2 * clamp(16px, 5vw, 40px));
   margin: 0 auto;
 }
 
