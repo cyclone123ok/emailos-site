@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en-NZ">
+<html lang="en-NZ" data-type="software">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="page-type" content="software">
+<meta name="site-kind" content="software">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>EmailOS | Less inbox. More day.</title>
 <meta name="description" content="EmailOS is a personal email app that runs on your own computer.">
@@ -17,61 +19,91 @@
 <meta property="og:image" content="https://cyclone123ok.github.io/emailos-site/assets/dunes-1000.webp">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/montserrat.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=9">
 <script src="intro.js?v=6"></script>
 </head>
 <body class="home">
-<a class="skip" href="#about">Skip to the details</a>
+<a class="skip" href="#what">Skip to the details</a>
 
 <header class="hero">
+  <nav class="top" aria-label="Main">
+    <a href="#what">What it does</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/dunes-dark-1000.webp 1000w, assets/dunes-dark.webp 2400w" sizes="100vw">
-    <img class="hero-dunes" src="assets/dunes-1000.webp" srcset="assets/dunes-1000.webp 1000w, assets/dunes.webp 2400w" sizes="100vw" alt="" fetchpriority="high" decoding="async">
+    <img class="hero-dunes" width="3200" height="1280" src="assets/dunes-1000.webp" srcset="assets/dunes-1000.webp 1000w, assets/dunes.webp 2400w" sizes="100vw" alt="" fetchpriority="high" decoding="async">
   </picture>
   <div class="hero-brand">
     <h1><img src="assets/icon.svg" alt="" width="72" height="72"><span>EmailOS</span></h1>
     <p class="hero-slogan">Less inbox. More day.</p>
     <p class="lead">EmailOS is a personal email app that runs on your own computer.</p>
-    <p class="hero-note">Google's sign-in screen shows the app under the name <span class="keep">inbox-sorter</span>.</p>
+    <a class="action" href="#what">See what EmailOS does<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></a>
   </div>
-  <a class="hero-next" href="#about" aria-label="Read about EmailOS">
-    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>
-  </a>
 </header>
 
-<main id="about" tabindex="-1">
-  <section>
-    <h2>What it does</h2>
-    <ul class="ruled">
-      <li>Sorts incoming mail into categories you choose</li>
-      <li>Flags mail that needs a reply</li>
-      <li>Drafts replies for you to review</li>
-      <li>Archives, labels, and moves mail in bulk</li>
-      <li>Moves unwanted mail to your provider's Trash folder, which your provider empties on its own schedule</li>
-    </ul>
+<main id="what" tabindex="-1">
+  <section class="wide" aria-labelledby="sort-title">
+    <div class="copy">
+      <h2 id="sort-title">Email sorted into categories you choose</h2>
+      <ul class="ruled">
+        <li>Sorts incoming mail into categories you choose</li>
+        <li>Flags mail that needs a reply</li>
+        <li>Archives, labels, and moves mail in bulk</li>
+        <li>Moves unwanted mail to your provider's Trash folder, which your provider empties on its own schedule</li>
+      </ul>
+    </div>
+    <picture class="shot">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/app-home-800-dark.webp 800w, assets/app-home-dark.webp 1500w" sizes="(max-width: 72rem) 100vw, 1072px">
+      <img src="assets/app-home-light.webp" srcset="assets/app-home-800-light.webp 800w, assets/app-home-light.webp 1500w" sizes="(max-width: 72rem) 100vw, 1072px" width="1500" height="949" loading="lazy" decoding="async" alt="The EmailOS home screen with demo mail: replies owed, tasks, and a board of categories with email counts.">
+    </picture>
   </section>
 
-  <section>
-    <h2>Who it is for</h2>
-    <p>EmailOS is a personal project. It has no public sign-up and no paid plan.</p>
+  <section class="split" aria-labelledby="write-title">
+    <div class="copy">
+      <h2 id="write-title">Replies you check before they go</h2>
+      <p>EmailOS drafts replies for you to review. Nothing an AI drafts goes out until you approve it.</p>
+      <p>AI summaries and drafts can be wrong, incomplete, or out of date. Check them before you rely on them.</p>
+      <p>The spelling and grammar check runs on your computer.</p>
+    </div>
+    <picture class="shot">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/app-write-dark.webp">
+      <img src="assets/app-write-light.webp" width="837" height="730" loading="lazy" decoding="async" alt="A draft in EmailOS with spelling mistakes underlined and a suggested correction.">
+    </picture>
   </section>
 
-  <section>
-    <h2>Your data</h2>
-    <p>EmailOS stores its copy of your mail on your own computer. It asks for access to your Gmail so it can read, sort, label, move, and send mail for you, and create Gmail filters when you ask. It uses that access only for these features. The <a href="privacy.html">privacy policy</a> names each outside service it can use.</p>
+  <section class="split flip" aria-labelledby="rules-title">
+    <div class="copy">
+      <h2 id="rules-title">Set responses that wait</h2>
+      <p>A rule can answer a kind of email with words you wrote. You choose how long it waits, from minutes to seven days.</p>
+      <p>If you reply first, it stays unsent. Rules that send on their own never depend on an AI's choice.</p>
+    </div>
+    <picture class="shot">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/app-rules-dark.webp">
+      <img src="assets/app-rules-light.webp" width="966" height="900" loading="lazy" decoding="async" alt="The EmailOS Automation page with a rule form, a reply box, and a wait of 10 minutes before replying.">
+    </picture>
   </section>
 
-  <section>
-    <h2>AI output</h2>
-    <p>AI summaries and drafts can be wrong, incomplete, or out of date. Check them before you rely on them. Nothing an AI drafts goes out until you approve it.</p>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p><a href="https://github.com/cyclone123ok/emailos-site/issues">Open an issue on GitHub</a></p>
-  </section>
 </main>
 
-<footer><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a></footer>
+<section class="close" aria-labelledby="close-title">
+  <div class="close-in">
+    <h2 id="close-title" class="close-slogan">Less inbox. More day.</h2>
+    <div class="close-grid">
+      <div>
+        <h3>Your data</h3>
+        <p>EmailOS stores its copy of your mail on your own computer. It asks for access to your Gmail so it can read, sort, label, move, and send mail for you, and create Gmail filters when you ask. It uses that access only for these features.</p>
+        <p>The <a href="privacy.html">privacy policy</a> names each outside service it can use.</p>
+      </div>
+      <div>
+        <h3>Who it is for</h3>
+        <p>EmailOS is a personal project. It has no public sign-up and no paid plan.</p>
+        <p><a href="https://github.com/cyclone123ok/emailos-site/issues">Open an issue on GitHub</a> to get in touch.</p>
+      </div>
+    </div>
+    <footer><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a></footer>
+  </div>
+</section>
 </body>
 </html>
